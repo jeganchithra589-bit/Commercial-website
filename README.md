@@ -1032,12 +1032,12 @@ window.onclick = function(event) {
 ```
 # OUTPUT
 
-<img width="1917" height="1015" alt="Screenshot 2026-11-10 132515" src="https://github.com/user-attachments/assets/1855e4af-919a-4dd1-98a4-e40260376ca0" />
+![alt text](<Screenshot 2026-11-10 132515.png>)
 
-<img width="1917" height="1010" alt="Screenshot 2026-11-10 132552" src="https://github.com/user-attachments/assets/bc3280ee-15ef-478d-8386-202ebca44fb4" />
+![alt text](<Screenshot 2026-11-10 132536.png>)
 
-<img width="1908" height="952" alt="Screenshot 2026-11-10 132536" src="https://github.com/user-attachments/assets/fdf8d21b-2eca-407c-aae6-6679be81b4bc" />
+![alt text](<Screenshot 2026-11-10 132552.png>)
 
 
 # RESULT
-The program for creating commercial website using CSS Flexbox is executed successfully.# Commercial-website
+The program for creating commercial website using CSS Flexbox is executed successfully.

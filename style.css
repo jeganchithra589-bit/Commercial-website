@@ -1,0 +1,396 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f8fa;
+    color: #202b3e;
+}
+
+/* Navigation */
+.navbar {
+    background: #19283f;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #e9b76b;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e9b76b;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-actions button {
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 10px 14px;
+}
+
+.icon-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 17px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.signup-btn {
+    background: white;
+    border: none;
+    color: #19283f;
+    font-weight: bold;
+}
+
+/* Search */
+.search-area {
+    display: none;
+    background: #19283f;
+    padding: 15px 7%;
+    text-align: center;
+}
+
+.search-area.active {
+    display: block;
+}
+
+.search-area input {
+    width: 70%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+/* Hero */
+.hero {
+    min-height: 530px;
+    background:
+        linear-gradient(90deg, rgba(16,29,48,.8),
+        rgba(16,29,48,.25)),
+        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600")
+        center/cover no-repeat;
+    display: flex;
+    align-items: flex-start;
+    padding: 100px 10%;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+.hero-content h1 span {
+    color: #e9b76b;
+}
+
+.hero-content p {
+    margin: 20px 0 30px;
+    line-height: 1.6;
+}
+
+.shop-btn {
+    display: inline-block;
+    background: white;
+    color: #19283f;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.shop-btn:hover {
+    background: #e9b76b;
+    transform: translateY(-3px);
+}
+
+/* Products */
+.products-section {
+    padding: 55px 7%;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+}
+
+.section-heading p {
+    color: #777;
+    margin-top: 8px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background: white;
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,.07);
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.13);
+}
+
+.product-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    min-height: 40px;
+}
+
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #19283f;
+}
+
+.product-bottom button {
+    background: #19283f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.product-bottom button:hover {
+    background: #c38d46;
+}
+
+.wish-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 9px;
+    background: #fff2f3;
+    color: #d64d69;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.wish-btn:hover {
+    background: #fbdce2;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    inset: 0;
+    background: rgba(0,0,0,.65);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 35px;
+    width: 400px;
+    max-width: 100%;
+    border-radius: 15px;
+    position: relative;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 35px rgba(0,0,0,.2);
+}
+
+.modal-content h2 {
+    color: #19283f;
+    margin-bottom: 12px;
+}
+
+.modal-content p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.modal-content input {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #19283f;
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #c38d46;
+}
+
+.switch-text {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.switch-text a {
+    color: #c38d46;
+    font-weight: bold;
+}
+
+/* Cart and Wishlist */
+.cart-row, .wish-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    gap: 10px;
+}
+
+.cart-row button, .wish-row button {
+    background: #f3e4e4;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cartTotal {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background: #19283f;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    line-height: 2;
+}
+
+footer p {
+    color: #ddd;
+}
+
+/* Mobile responsive */
+@media(max-width: 850px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 70px 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .product-card {
+        width: 45%;
+    }
+}
+
+@media(max-width: 500px) {
+    .product-card {
+        width: 100%;
+    }
+
+    .search-area input {
+        width: 100%;
+    }
+}

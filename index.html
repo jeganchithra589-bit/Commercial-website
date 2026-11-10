@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODERN - Furniture Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<header class="navbar">
+    <div class="logo">ModFur.</div>
+
+    <nav>
+        <a href="#home">Living Room</a>
+        <a href="#products">Bedroom</a>
+        <a href="#products">Kitchen & Dining</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <div class="nav-actions">
+        <button class="icon-btn" onclick="toggleSearch()">
+            🔍
+        </button>
+        <button class="nav-btn" onclick="openAccount()">Log In</button>
+        <button class="signup-btn" onclick="openAccount('register')">
+            Sign Up
+        </button>
+        <button class="icon-btn" onclick="showWishlist()">
+            ♡ <span id="wishCount">0</span>
+        </button>
+        <button class="icon-btn" onclick="showCart()">
+            🛒 <span id="cartCount">0</span>
+        </button>
+    </div>
+</header>
+
+<!-- Search Bar -->
+<div class="search-area" id="searchArea">
+    <input type="text" id="searchInput"
+           placeholder="Search furniture..."
+           oninput="searchProducts()">
+</div>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>
+            Style your home <span>just like</span><br>
+            you'd want it
+        </h1>
+
+        <p>
+            Discover beautiful furniture designed
+            to make your home special.
+        </p>
+
+        <a href="#products" class="shop-btn">
+            SHOP CATEGORIES
+        </a>
+    </div>
+</section>
+
+<!-- Products -->
+<section class="products-section" id="products">
+
+    <div class="section-heading">
+        <h2>New In Store</h2>
+        <p>Explore our latest collection</p>
+    </div>
+
+    <div class="product-container" id="productContainer">
+
+        <div class="product-card" data-name="white chair">
+            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=600"
+                 alt="White Chair">
+            <div class="product-info">
+                <h3>Maynooth White Armless Chair</h3>
+                <div class="product-bottom">
+                    <span class="price">$79</span>
+                    <button onclick="addToCart('White Chair',79)">
+                        Add to Bag
+                    </button>
+                </div>
+                <button class="wish-btn"
+                    onclick="addToWishlist('White Chair')">
+                    ♡ Add to Wishlist
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card" data-name="yellow armchair">
+            <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=600"
+                 alt="Yellow Chair">
+            <div class="product-info">
+                <h3>Maynooth Yellow Armchair</h3>
+                <div class="product-bottom">
+                    <span class="price">$79</span>
+                    <button onclick="addToCart('Yellow Armchair',79)">
+                        Add to Bag
+                    </button>
+                </div>
+                <button class="wish-btn"
+                    onclick="addToWishlist('Yellow Armchair')">
+                    ♡ Add to Wishlist
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card" data-name="black chair">
+            <img src="https://images.unsplash.com/photo-1598300056393-4aac492f4344?w=600"
+                 alt="Black Chair">
+            <div class="product-info">
+                <h3>Maynooth Black Armless Chair</h3>
+                <div class="product-bottom">
+                    <span class="price">$79</span>
+                    <button onclick="addToCart('Black Chair',79)">
+                        Add to Bag
+                    </button>
+                </div>
+                <button class="wish-btn"
+                    onclick="addToWishlist('Black Chair')">
+                    ♡ Add to Wishlist
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card" data-name="standing lamp">
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600"
+                 alt="Standing Lamp">
+            <div class="product-info">
+                <h3>Maynooth Standing Lamp</h3>
+                <div class="product-bottom">
+                    <span class="price">$79</span>
+                    <button onclick="addToCart('Standing Lamp',79)">
+                        Add to Bag
+                    </button>
+                </div>
+                <button class="wish-btn"
+                    onclick="addToWishlist('Standing Lamp')">
+                    ♡ Add to Wishlist
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card" data-name="standing lamp">
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600"
+                 alt="Standing Lamp">
+            <div class="product-info">
+                <h3>Maynooth Standing Lamp</h3>
+                <div class="product-bottom">
+                    <span class="price">$79</span>
+                    <button onclick="addToCart('Standing Lamp',79)">
+                        Add to Bag
+                    </button>
+                </div>
+                <button class="wish-btn"
+                    onclick="addToWishlist('Standing Lamp')">
+                    ♡ Add to Wishlist
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card" data-name="standing lamp">
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600"
+                 alt="Standing Lamp">
+            <div class="product-info">
+                <h3>Maynooth Standing Lamp</h3>
+                <div class="product-bottom">
+                    <span class="price">$79</span>
+                    <button onclick="addToCart('Standing Lamp',79)">
+                        Add to Bag
+                    </button>
+                </div>
+                <button class="wish-btn"
+                    onclick="addToWishlist('Standing Lamp')">
+                    ♡ Add to Wishlist
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card" data-name="standing lamp">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlqpcsr5-t9iXveNLNzQVI-OKLFJxD85JCk0v4DHXd8Q&s=10"
+                 alt="Standing Lamp">
+            <div class="product-info">
+                <h3>Luxury sofa</h3>
+                <div class="product-bottom">
+                    <span class="price">$79</span>
+                    <button onclick="addToCart('Standing Lamp',79)">
+                        Add to Bag
+                    </button>
+                </div>
+                <button class="wish-btn"
+                    onclick="addToWishlist('Standing Lamp')">
+                    ♡ Add to Wishlist
+                </button>
+            </div>
+        </div>
+
+        <div class="product-card" data-name="standing lamp">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxuiEc5lQxDxE55fqCS_BJonQ8sI2myT4twSM6jhHGoQ&shttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxuiEc5lQxDxE55fqCS_BJonQ8sI2myT4twSM6jhHGoQ&s"
+                 alt="Standing Lamp">
+            <div class="product-info">
+                <h3>Maynooth Standing Lamp</h3>
+                <div class="product-bottom">
+                    <span class="price">$90</span>
+                    <button onclick="addToCart('Standing Lamp',79)">
+                        Add to Bag
+                    </button>
+                </div>
+                <button class="wish-btn"
+                    onclick="addToWishlist('Standing Lamp')">
+                    ♡ Add to Wishlist
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Account Modal -->
+<div class="modal" id="accountModal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">×</button>
+
+        <h2 id="accountTitle">Welcome Back!</h2>
+        <p>Login to your furniture account</p>
+
+        <input type="text" id="username"
+               placeholder="Your Name">
+
+        <input type="email" id="email"
+               placeholder="Email Address">
+
+        <input type="password" id="password"
+               placeholder="Password">
+
+        <button class="submit-btn" onclick="loginUser()">
+            Login
+        </button>
+
+        <p id="accountMessage"></p>
+
+        <p class="switch-text">
+            New user?
+            <a href="#" onclick="openAccount('register')">
+                Create Account
+            </a>
+        </p>
+    </div>
+</div>
+
+<!-- Cart Modal -->
+<div class="modal" id="cartModal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">×</button>
+        <h2>Your Shopping Cart 🛒</h2>
+        <div id="cartItems"></div>
+        <h3 id="cartTotal">Total: $0</h3>
+        <button class="submit-btn" onclick="checkout()">
+            Proceed to Checkout
+        </button>
+    </div>
+</div>
+
+<!-- Wishlist Modal -->
+<div class="modal" id="wishlistModal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">×</button>
+        <h2>My Wishlist ♡</h2>
+        <div id="wishlistItems"></div>
+    </div>
+</div>
+
+<!-- Contact -->
+<footer id="contact">
+    <h2>MODERN Furniture</h2>
+    <p>Make your home beautiful with MODERN.</p>
+    <p>Instagram | Facebook | Pinterest</p>
+    <p>© 2026 MODERN Furniture. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
